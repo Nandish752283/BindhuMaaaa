@@ -104,7 +104,7 @@ button {{
     <button onclick="showProposal()">Yes! 💖</button>
 </div>
 <div id="proposalScreen" class="screen">
-    💖 {her_name}, Will You Be My Valentine? 💍<br>
+    💖 Poojjiii, Will You Be My Valentine? 💍<br>
     <button id="yesBtn" onclick="sayYes()">YESSS 💖</button>
     <button id="noBtn">NO 😭</button>
 </div>
@@ -178,7 +178,7 @@ function showProposal(){{
 }}
 function sayYes(){{
     const screen = document.getElementById('proposalScreen');
-    screen.innerHTML=`<h1 style="font-size:50px;">💖 SHE SAID YES! 💖<br>I Love You Forever {her_name} 💍</h1>`;
+    screen.innerHTML=`<h1 style="font-size:50px;">💖 YOU SAID YES! 💖<br>I Love You Forever {her_name} 💍</h1>`;
     for(let i=0;i<50;i++){{
         let heart = document.createElement('div');
         heart.className='heart';
