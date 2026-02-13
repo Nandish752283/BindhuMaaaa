@@ -52,7 +52,7 @@ body {{
     flex-direction:column;
     z-index:2;
     text-align:center;
-    color:white;
+    color:black;
 }}
 .screen h1, .screen p {{
     font-family: 'Dancing Script', cursive;
