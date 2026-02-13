@@ -6,8 +6,8 @@ st.set_page_config(page_title="Valentine Surprise 💖", layout="wide")
 her_name = "Poojiiii"
 your_name = "Your King"
 
-# Background image (replace with your desired image URL)
-background_image = "https://media.istockphoto.com/id/1305161472/photo/red-flowers-background.jpg?s=612x612&w=0&k=20&c=AZWQdZgT6Xn2K8QOkjYx-hW6u4G9t5yIUWnVugfG8Xk="
+# Background image (direct working URL of flowers image)
+background_image = "https://images.unsplash.com/photo-1490806846043-38c769b46c50?auto=format&fit=crop&w=1470&q=80"
 
 # Slideshow images (same as background)
 photos = [
