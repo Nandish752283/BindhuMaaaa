@@ -7,7 +7,7 @@ her_name = "Poojiiii"
 your_name = "Your King"
 
 # Background image (direct working URL of flowers image)
-background_image = "https://images.unsplash.com/photo-1490806846043-38c769b46c50?auto=format&fit=crop&w=1470&q=80"
+background_image = "https://github.com/Nandish752283/BindhuMaaaa/blob/main/1000_F_143134352_oLaa3Dej0MwUnVrPs6GF1uIr2V9jGsWu.jpg"
 
 # Slideshow images (same as background)
 photos = [
