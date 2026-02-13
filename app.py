@@ -3,11 +3,11 @@ import streamlit.components.v1 as components
 
 st.set_page_config(page_title="Valentine Surprise 💖", layout="wide")
 
-her_name = "My Princess"
+her_name = "Poojiiii"
 your_name = "Your King"
 
 # Background image (replace with your desired image URL)
-background_image = "https://images.unsplash.com/photo-1601758123927-9a3e0fae1b3f?auto=format&fit=crop&w=1470&q=80"
+background_image = "https://media.istockphoto.com/id/1305161472/photo/red-flowers-background.jpg?s=612x612&w=0&k=20&c=AZWQdZgT6Xn2K8QOkjYx-hW6u4G9t5yIUWnVugfG8Xk="
 
 # Slideshow images
 photos = [
@@ -44,7 +44,7 @@ body {{
 }}
 .screen {{
     position:absolute;
-    width:90vw; height:90vh;  /* reduced size */
+    width:90vw; height:90vh;
     top:50%; left:50%;
     transform:translate(-50%, -50%);
     display:none;
