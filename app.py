@@ -9,11 +9,11 @@ your_name = "Your King"
 # Background image (replace with your desired image URL)
 background_image = "https://media.istockphoto.com/id/1305161472/photo/red-flowers-background.jpg?s=612x612&w=0&k=20&c=AZWQdZgT6Xn2K8QOkjYx-hW6u4G9t5yIUWnVugfG8Xk="
 
-# Slideshow images
+# Slideshow images (same as background)
 photos = [
-    "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e",
-    "https://images.unsplash.com/photo-1507874457470-272b3c8d8ee2",
-    "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e"
+    background_image,
+    background_image,
+    background_image
 ]
 
 html_code = f"""
@@ -27,7 +27,7 @@ html_code = f"""
 html, body {{
     margin:0; padding:0;
     width:100%; height:100%;
-    overflow:hidden;  /* fully non-scrollable */
+    overflow:hidden;
     font-family: 'Roboto', sans-serif;
 }}
 body {{
@@ -111,7 +111,6 @@ button {{
 </div>
 
 <script>
-// Slideshow
 const photos = {photos};
 function startSlideshow(){{
     const container = document.getElementById('slideshow');
@@ -130,7 +129,6 @@ function startSlideshow(){{
     }},4000);
 }}
 
-// Countdown
 function startCountdown(){{
     const countdown = document.getElementById('countdown');
     const target = new Date(new Date().getFullYear(),1,14);
@@ -145,7 +143,6 @@ function startCountdown(){{
     }},1000);
 }}
 
-// Heart Game
 function showGame(){{
     const screen = document.getElementById('gameScreen');
     screen.style.display='flex';
@@ -170,7 +167,6 @@ function showGame(){{
     }}
 }}
 
-// Proposal
 function showProposal(){{
     document.getElementById('quizScreen').style.display='none';
     const screen = document.getElementById('proposalScreen');
@@ -195,7 +191,6 @@ function sayYes(){{
     }}
 }}
 
-// Initialize
 window.onload = function(){{ startSlideshow(); startCountdown(); showGame(); }};
 </script>
 
