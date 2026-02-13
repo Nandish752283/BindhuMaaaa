@@ -6,14 +6,13 @@ st.set_page_config(page_title="Valentine Surprise 💖", layout="wide")
 her_name = "Poojiiii"
 your_name = "Your King"
 
-# Background image (direct working URL of flowers image)
-background_image = "https://github.com/Nandish752283/BindhuMaaaa/blob/main/1000_F_143134352_oLaa3Dej0MwUnVrPs6GF1uIr2V9jGsWu.jpg"
+# Random beautiful flower images from Unsplash
+background_image = "https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1470&q=80"
 
-# Slideshow images (same as background)
 photos = [
-    background_image,
-    background_image,
-    background_image
+    "https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1470&q=80",
+    "https://images.unsplash.com/photo-1471357674240-e1a485acb3e1?auto=format&fit=crop&w=1470&q=80",
+    "https://images.unsplash.com/photo-1493244040629-496f6d136cc3?auto=format&fit=crop&w=1470&q=80"
 ]
 
 html_code = f"""
