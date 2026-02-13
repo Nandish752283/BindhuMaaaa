@@ -7,7 +7,7 @@ her_name = "My Princess"
 your_name = "Your King"
 
 # Background image (replace with your desired image URL)
-background_image = "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fphotos%2Fred-flowers&psig=AOvVaw1wtqGsx320Ux1Q_p57J_hN&ust=1771092295164000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCMiqkc-H15IDFQAAAAAdAAAAABAE"
+background_image = "https://images.unsplash.com/photo-1601758123927-9a3e0fae1b3f?auto=format&fit=crop&w=1470&q=80"
 
 # Slideshow images
 photos = [
@@ -27,11 +27,13 @@ html_code = f"""
 html, body {{
     margin:0; padding:0;
     width:100%; height:100%;
-    overflow:hidden;  /* non-scrollable */
+    overflow:hidden;  /* fully non-scrollable */
     font-family: 'Roboto', sans-serif;
 }}
 body {{
     background: url('{background_image}') center/cover no-repeat;
+    max-width:100vw;
+    max-height:100vh;
 }}
 .glass {{
     position:absolute;
@@ -42,8 +44,9 @@ body {{
 }}
 .screen {{
     position:absolute;
-    width:100%; height:100%;
-    top:0; left:0;
+    width:90vw; height:90vh;  /* reduced size */
+    top:50%; left:50%;
+    transform:translate(-50%, -50%);
     display:none;
     justify-content:center;
     align-items:center;
@@ -54,7 +57,7 @@ body {{
 }}
 .screen h1, .screen p {{
     font-family: 'Dancing Script', cursive;
-    font-size:2.5em;
+    font-size:2em;
     margin:0.5em 0;
 }}
 #slideshow {{
@@ -76,13 +79,13 @@ button {{
     border:none;
     border-radius:15px;
     padding:12px 25px;
-    font-size:22px;
+    font-size:20px;
     font-family: 'Roboto', sans-serif;
 }}
 #yesBtn {{ background-color:#ff69b4; color:white; }}
 #noBtn {{ background-color:#c71585; color:white; position:absolute; top:50%; left:55%; }}
-.heart {{ position:absolute; font-size:35px; cursor:pointer; }}
-#countdown {{ position:absolute; top:20px; left:50%; transform:translateX(-50%); font-size:30px; background:rgba(0,0,0,0.3); padding:10px 20px; border-radius:20px; color:white; font-weight:bold; z-index:3; }}
+.heart {{ position:absolute; font-size:30px; cursor:pointer; }}
+#countdown {{ position:absolute; top:20px; left:50%; transform:translateX(-50%); font-size:28px; background:rgba(0,0,0,0.3); padding:8px 15px; border-radius:20px; color:white; font-weight:bold; z-index:3; }}
 </style>
 </head>
 <body>
@@ -94,7 +97,7 @@ button {{
 <!-- Screens -->
 <div id="gameScreen" class="screen">
     <h1>Collect Hearts to Unlock Quiz 💌</h1>
-    <div id="heartsContainer" style="width:100%; height:70%; position:relative;"></div>
+    <div id="heartsContainer" style="width:100%; height:60%; position:relative;"></div>
 </div>
 <div id="quizScreen" class="screen">
     <h1>Quick Quiz 🌸</h1>
@@ -152,8 +155,8 @@ function showGame(){{
         let heart = document.createElement('div');
         heart.className='heart';
         heart.innerHTML='❤️';
-        heart.style.left=Math.random()*75+'vw';
-        heart.style.top=Math.random()*55+'vh';
+        heart.style.left=Math.random()*70+'vw';
+        heart.style.top=Math.random()*50+'vh';
         heart.onclick = function(){{
             heart.style.display='none';
             hearts[i]=true;
@@ -174,20 +177,20 @@ function showProposal(){{
     screen.style.display='flex';
     const noBtn = document.getElementById('noBtn');
     noBtn.addEventListener('mouseover',()=>{{
-        noBtn.style.left=Math.random()*70+'vw';
-        noBtn.style.top=Math.random()*70+'vh';
+        noBtn.style.left=Math.random()*60+'vw';
+        noBtn.style.top=Math.random()*50+'vh';
     }});
 }}
 function sayYes(){{
     const screen = document.getElementById('proposalScreen');
-    screen.innerHTML=`<h1 style="font-size:60px;">💖 SHE SAID YES! 💖<br>I Love You Forever {her_name} 💍</h1>`;
+    screen.innerHTML=`<h1 style="font-size:50px;">💖 SHE SAID YES! 💖<br>I Love You Forever {her_name} 💍</h1>`;
     for(let i=0;i<50;i++){{
         let heart = document.createElement('div');
         heart.className='heart';
         heart.innerHTML='❤️';
         heart.style.left=Math.random()*100+'vw';
         heart.style.top=Math.random()*100+'vh';
-        heart.style.fontSize=(Math.random()*35+15)+'px';
+        heart.style.fontSize=(Math.random()*30+15)+'px';
         document.body.appendChild(heart);
     }}
 }}
@@ -200,4 +203,4 @@ window.onload = function(){{ startSlideshow(); startCountdown(); showGame(); }};
 </html>
 """
 
-components.html(html_code, height=800)
+components.html(html_code, height=700)
